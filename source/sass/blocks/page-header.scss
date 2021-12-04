@@ -1,0 +1,12 @@
+.page-header {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 75px;
+  padding-top: 16px;
+
+  @media (max-width: $to-laptop-width) {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+}

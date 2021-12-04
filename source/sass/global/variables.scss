@@ -4,10 +4,20 @@
 $color-white: #ffffff;
 $color-black: #000000;
 $color-light-black:#131314;
+
+$color-black-special: #1c1c1c;
+
 $color-dark:#1f1f1f;
+$color-dark-special: #141517;
+$color-dark-light: #48494d;
+
 $color-gray: #f6f7f9;
+$color-gray-dark: #f6f6f6;
+$color-gray-special: #c9ccd4;;
 $color-light-gray: #e5e5e5;
 $color-light-blue: #0ad9c6;
+
+$color-error: #ff0000;
 
 // Fonts
 //---------------------------------
@@ -18,6 +28,6 @@ $font-family--open-sans: "Open-Sans", "Arial", sans-serif;
 //---------------------------------
 
 $mobile-width: 320px;
-$tablet-width: 768px;
-$laptop-width: 1024px;
+$to-tablet-width: 767px;
+$to-laptop-width: 1023px;
 $desktop-width: 1440px;

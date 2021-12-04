@@ -366,11 +366,18 @@ body {
   line-height: 34px;
   font-family: "Open-Sans", "Arial", sans-serif;
   color: #000000;
-  background-color: #e5e5e5;
+  background-color: #ffffff;
   -ms-grid-rows: -webkit-min-content 1fr -webkit-min-content;
   -ms-grid-rows: min-content 1fr min-content;
   grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content; }
+
+@media (max-width: 1023px) {
+  .no-scroll {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; } }
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -386,3 +393,377 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%); }
+
+.intro {
+  min-height: 825px;
+  color: #ffffff;
+  background-color: #1f1f1f;
+  background-image: url("../img/content/bike@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .intro {
+      background-image: url("../img/content/bike@2x.jpg"); } }
+  @media (max-width: 1023px) {
+    .intro {
+      position: relative;
+      background: none; } }
+
+.intro__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 71px;
+  padding-top: 254px;
+  padding-bottom: 237px; }
+  @media (max-width: 1023px) {
+    .intro__wrapper {
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      display: block; } }
+
+.page-header {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 75px;
+  padding-top: 16px; }
+  @media (max-width: 1023px) {
+    .page-header {
+      max-width: none;
+      margin: 0;
+      padding: 0; } }
+
+.main-nav__toggle {
+  display: none; }
+  @media (max-width: 1023px) {
+    .main-nav__toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 3;
+      display: block;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      background-color: #0ad9c6;
+      border: 0;
+      cursor: pointer; } }
+  .main-nav__toggle:hover, .main-nav__toggle:focus {
+    opacity: 0.6; }
+  .main-nav__toggle:active {
+    opacity: 0.3; }
+
+.main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 14px;
+  width: 22px;
+  height: 1px;
+  background-color: #000000;
+  -webkit-box-shadow: 0 7px 0 0 #000000, 0 13px 0 0 #000000;
+          box-shadow: 0 7px 0 0 #000000, 0 13px 0 0 #000000; }
+
+.main-nav.open .main-nav__toggle {
+  background-color: #ffffff; }
+
+.main-nav.open .main-nav__toggle::before,
+.main-nav.open .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  top: 26px;
+  right: 9px;
+  width: 32px;
+  height: 1px;
+  background-color: rgba(20, 21, 23, 0.2);
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+.main-nav.open .main-nav__toggle::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.main-nav.open .main-nav__toggle::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+.main-nav.no-js .main-nav__toggle {
+  display: none; }
+
+.main-nav__list {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 0 4px 5px;
+  list-style: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  grid-gap: 10px;
+  -ms-grid-columns: -webkit-max-content -webkit-max-content -webkit-max-content -webkit-max-content;
+  -ms-grid-columns: max-content max-content max-content max-content;
+  grid-template-columns: -webkit-max-content -webkit-max-content -webkit-max-content -webkit-max-content;
+  grid-template-columns: max-content max-content max-content max-content; }
+  @media (max-width: 1023px) {
+    .main-nav__list {
+      display: none; } }
+
+@media (max-width: 1023px) {
+  .main-nav.open {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #ffffff; } }
+
+@media (max-width: 1023px) {
+  .main-nav.open .main-nav__list {
+    display: block;
+    padding-top: 100px;
+    padding-bottom: 100px; } }
+
+.main-nav.no-js {
+  position: static; }
+
+.main-nav__link {
+  display: block;
+  padding: 5px 15px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  color: #ffffff;
+  opacity: 0.7; }
+  @media (max-width: 1023px) {
+    .main-nav__link {
+      position: relative;
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 17px 35px 17px 16px;
+      font-size: 20px;
+      line-height: 28px;
+      color: #48494d;
+      background-color: #f6f6f6;
+      opacity: 1; } }
+  @media (max-width: 1023px) {
+    .main-nav__link::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 25px;
+      width: 8px;
+      height: 12px;
+      margin-top: -6px;
+      background-image: url("../img/svg/arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 8px 12px; } }
+  .main-nav__link:hover, .main-nav__link:focus {
+    opacity: 0.6; }
+  .main-nav__link:active {
+    opacity: 0.3; }
+
+.promo {
+  width: 390px; }
+  @media (max-width: 1023px) {
+    .promo {
+      width: 100%;
+      min-height: 320px;
+      padding: 25px 21px;
+      padding-bottom: 79px;
+      text-align: center;
+      color: #ffffff;
+      background-color: #1f1f1f;
+      background-image: url("../img/content/bike-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 2dppx) {
+    .promo {
+      background-image: url("../img/content/bike-tablet@2x.jpg"); } }
+  @media (max-width: 767px) {
+    .promo {
+      padding: 25px 16px 69px;
+      background-image: url("../img/content/bike-mobile@1x.jpg"); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
+    .promo {
+      background-image: url("../img/content/bike-mobile@2x.jpg"); } }
+
+.promo__logo {
+  display: block;
+  width: 67px;
+  margin: 0;
+  margin-bottom: 30px; }
+  @media (max-width: 1023px) {
+    .promo__logo {
+      margin-bottom: 88px; } }
+  @media (max-width: 767px) {
+    .promo__logo {
+      margin-bottom: 75px; } }
+  .promo__logo:hover, .promo__logo:focus {
+    opacity: 0.6; }
+  .promo__logo:active {
+    opacity: 0.3; }
+  .promo__logo:not(a[href]) {
+    pointer-events: none; }
+
+.promo h2 {
+  margin: 0;
+  margin-bottom: 26px;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 64px; }
+  @media (max-width: 1023px) {
+    .promo h2 {
+      max-width: 435px;
+      margin: 0 auto;
+      margin-bottom: 21px;
+      font-size: 30px;
+      line-height: 42px; } }
+  @media (max-width: 1023px) {
+    .promo h2 {
+      margin-bottom: 19px; } }
+
+.promo p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  opacity: 0.8; }
+  @media (max-width: 1023px) {
+    .promo p {
+      max-width: 435px;
+      margin: 0 auto;
+      font-size: 18px; } }
+
+.feedback {
+  width: 327px;
+  padding-top: 6px; }
+  @media (max-width: 1023px) {
+    .feedback {
+      width: 324px;
+      margin: 0 auto;
+      padding-top: 71px;
+      padding-bottom: 70px; } }
+  @media (max-width: 767px) {
+    .feedback {
+      width: 288px; } }
+
+.feedback p {
+  margin: 0;
+  margin-bottom: 18px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  text-align: center; }
+  @media (max-width: 1023px) {
+    .feedback p {
+      margin-bottom: 29px;
+      font-size: 18px;
+      color: #000000; } }
+  @media (max-width: 767px) {
+    .feedback p {
+      margin-bottom: 20px;
+      font-size: 18px; } }
+
+.feedback__field {
+  margin-bottom: 20px; }
+
+@media (max-width: 1023px) {
+  .feedback form {
+    padding-right: 1px;
+    padding-left: 2px; } }
+
+@media (max-width: 767px) {
+  .feedback form {
+    padding: 0; } }
+
+.feedback__field input {
+  width: 100%;
+  padding: 14px 29px 8px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  font-family: inherit;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #c9ccd4;
+  border-radius: 6px; }
+  @media (max-width: 1023px) {
+    .feedback__field input {
+      padding: 11px 21px; } }
+  @media (max-width: 767px) {
+    .feedback__field input {
+      padding: 12px 25px 10px; } }
+
+.feedback__field input::-webkit-input-placeholder {
+  font-size: 15px;
+  line-height: 24px;
+  color: #1c1c1c;
+  opacity: 0.5; }
+
+.feedback__field input::-moz-placeholder {
+  font-size: 15px;
+  line-height: 24px;
+  color: #1c1c1c;
+  opacity: 0.5; }
+
+.feedback__field input:-ms-input-placeholder {
+  font-size: 15px;
+  line-height: 24px;
+  color: #1c1c1c;
+  opacity: 0.5; }
+
+.feedback__field input::-ms-input-placeholder {
+  font-size: 15px;
+  line-height: 24px;
+  color: #1c1c1c;
+  opacity: 0.5; }
+
+.feedback__field input::placeholder {
+  font-size: 15px;
+  line-height: 24px;
+  color: #1c1c1c;
+  opacity: 0.5; }
+
+.feedback__field input:hover,
+.feedback__field input:focus {
+  border-color: #000000; }
+
+.feedback__field .is-invalid {
+  outline: 4px solid #ff0000; }
+
+.feedback__button {
+  width: 100%;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  font-family: inherit;
+  text-align: center;
+  color: #000000;
+  background-color: #0ad9c6;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer; }
+  @media (max-width: 767px) {
+    .feedback__button {
+      padding: 13px 15px 16px; } }
+  .feedback__button:hover, .feedback__button:focus {
+    opacity: 0.6; }
+  .feedback__button:active {
+    opacity: 0.3; }

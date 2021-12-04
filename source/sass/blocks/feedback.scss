@@ -1,0 +1,122 @@
+.feedback {
+  width: 327px;
+  padding-top: 6px;
+
+  @media (max-width: $to-laptop-width) {
+    width: 324px;
+    margin: 0 auto;
+    padding-top: 71px;
+    padding-bottom: 70px;
+  }
+
+  @media (max-width: $to-tablet-width) {
+    width: 288px;
+  }
+}
+
+.feedback p {
+  margin: 0;
+  margin-bottom: 18px;
+
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  text-align: center;
+
+  @media (max-width: $to-laptop-width) {
+    margin-bottom: 29px;
+
+    font-size: 18px;
+    color: $color-black;
+  }
+
+  @media (max-width: $to-tablet-width) {
+    margin-bottom: 20px;
+
+    font-size: 18px;
+  }
+}
+
+.feedback__field {
+  margin-bottom: 20px;
+}
+
+.feedback form {
+  @media (max-width: $to-laptop-width) {
+    padding-right: 1px;
+    padding-left: 2px;
+  }
+  @media (max-width: $to-tablet-width) {
+    padding: 0;
+  }
+}
+
+.feedback__field input {
+  width: 100%;
+  padding: 14px 29px 8px;
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  font-family: inherit;
+  color: $color-black;
+
+  background-color: $color-white;
+  border: 1px solid $color-gray-special;
+  border-radius: 6px;
+
+  @media (max-width: $to-laptop-width) {
+    padding: 11px 21px;
+  }
+
+  @media (max-width: $to-tablet-width) {
+    padding: 12px 25px 10px;
+  }
+}
+
+.feedback__field input::placeholder {
+  font-size: 15px;
+  line-height: 24px;
+  color: $color-black-special;
+
+  opacity: 0.5;
+}
+
+.feedback__field input:hover,
+.feedback__field input:focus {
+  border-color: $color-black;
+}
+
+.feedback__field .is-invalid {
+  outline: 4px solid $color-error;
+}
+
+.feedback__button {
+  width: 100%;
+  padding: 15px;
+
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  font-family: inherit;
+  text-align: center;
+  color: $color-black;
+
+  background-color: $color-light-blue;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+
+  @media (max-width: $to-tablet-width) {
+    padding: 13px 15px 16px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

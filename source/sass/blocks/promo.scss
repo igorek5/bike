@@ -1,0 +1,100 @@
+.promo {
+  width: 390px;
+
+  @media (max-width: $to-laptop-width) {
+    width: 100%;
+    min-height: 320px;
+    padding: 25px 21px;
+    padding-bottom: 79px;
+
+    text-align: center;
+    color: $color-white;
+
+    background-color: $color-dark;
+    background-image: url("../img/content/bike-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/content/bike-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $to-tablet-width) {
+    padding: 25px 16px 69px;
+
+    background-image: url("../img/content/bike-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/content/bike-mobile@2x.jpg");
+    }
+  }
+}
+
+.promo__logo {
+  display: block;
+  width: 67px;
+  margin: 0;
+  margin-bottom: 30px;
+
+  @media (max-width: $to-laptop-width) {
+    margin-bottom: 88px;
+  }
+
+  @media (max-width: $to-tablet-width) {
+    margin-bottom: 75px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:not(a[href]) {
+    pointer-events: none;
+  }
+}
+
+.promo h2 {
+  margin: 0;
+  margin-bottom: 26px;
+
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 64px;
+
+  @media (max-width: $to-laptop-width) {
+    max-width: 435px;
+    margin: 0 auto;
+    margin-bottom: 21px;
+
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  @media (max-width: $to-laptop-width) {
+    margin-bottom: 19px;
+  }
+}
+
+.promo p {
+  margin: 0;
+
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+
+  opacity: 0.8;
+
+  @media (max-width: $to-laptop-width) {
+    max-width: 435px;
+    margin: 0 auto;
+
+    font-size: 18px;
+  }
+}
