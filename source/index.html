@@ -13,13 +13,13 @@
 
 <body>
   <section class="intro">
-    <h1 class="visually-hidden">Магазин велосипедов</h1>
+    <h1 class="visually-hidden">Магазин велосипедов «Moon»</h1>
     <header class="page-header">
       <nav class="page-header__nav main-nav open no-js">
         <button class="main-nav__toggle" type="button" aria-label="Открыть/закрыть меню"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#foot">О нас</a>
+            <a class="main-nav__link" href="#">О нас</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="#">Виды велосипедов</a>
@@ -28,7 +28,7 @@
             <a class="main-nav__link" href="#">Видео про велосипеды</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Контакты</a>
+            <a class="main-nav__link" href="#contacts">Контакты</a>
           </li>
 
         </ul>
@@ -64,40 +64,51 @@
     </div>
   </section>
   <main>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
-<h1>dfsdf</h1>
+
+    <section class="map">
+      <h2>Как нас найти?</h2>
+      <p>Мы находимся по адресу: Санкт&nbsp;-&nbsp;Петербург, ул. Большая Конюшенная,&nbsp;д.&nbsp;19</p>
+      <div class="map__block">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31980.6500483669!2d30.284302238671245!3d59.93561630943495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1638705207477!5m2!1sru!2sru"
+          width="957" height="530" style="border:0;" allowfullscreen="" loading="lazy" tabindex="0"
+          title="Санкт-Петербург, ул. Большая Конюшенная, д. 19"></iframe>
+
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)"
+            srcset="img/content/map-mobile@1x.webp, img/content/map-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)"
+            srcset="img/content/map-tablet@1x.webp, img/content/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/content/map@1x.webp, img/content/map@2x.webp 2x">
+          <!-- 1х: 957px; 2x: 1914px -->
+          <img src="img/content/map@1x.png" srcset="img/content/map@2x.png 2x" width="957" height="530"
+            alt="Мы находимся по адресу: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+        </picture>
+      </div>
+    </section>
 
   </main>
-  <footer id="foot" class="page-footer">
+  <footer class="page-footer">
+    <div class="page-footer__contacts" id="contacts">
 
+      <a class="page-footer__link page-footer__link--mail" href="mailto:puteshestviemechta@gmail.ru">
+        <svg width="26" height="20">
+          <use xlink:href="img/sprite_auto.svg#icon-email"></use>
+        </svg>
+        <span>puteshestviemechta@gmail.ru</span>
+      </a>
+
+      <a class="page-footer__link page-footer__link--phone" href="tel:+749978468446">
+        <svg width="21" height="22">
+          <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+        </svg>
+        <span>+7 (499) -784-684-46</span>
+      </a>
+      </address>
+    </div>
   </footer>
 
-  <script src="js/main.min.js" type="module"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>

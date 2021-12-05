@@ -15,6 +15,7 @@
 
   @media (max-width: $to-laptop-width) {
     position: relative;
+    min-height: auto;
 
     background: none;
   }
