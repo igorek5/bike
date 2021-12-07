@@ -78,6 +78,7 @@
 .feedback__field input::placeholder {
   font-size: 15px;
   line-height: 24px;
+  font-family: inherit;
   color: $color-black-special;
 
   opacity: 0.5;

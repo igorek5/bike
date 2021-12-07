@@ -2,14 +2,14 @@
   min-width: 320px;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 150px 20px 130px;
+  padding: 150px 20px 113px;
 
   @media (max-width: $to-laptop-width) {
-    padding: 0 93px 130px;
+    padding: 0 93px 46px;
   }
 
   @media (max-width: $to-tablet-width) {
-    padding: 0 10px 130px;
+    padding: 0 10px 43px;
   }
 }
 
