@@ -1,0 +1,155 @@
+.video {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 157px;
+    left: 0;
+    z-index: -1;
+
+    background-color: $color-light-black;
+
+    @media (max-width: $to-laptop-width) {
+      bottom: 144px;
+    }
+
+    @media (max-width: $to-laptop-width) {
+      bottom: 109px;
+    }
+  }
+}
+
+.video__wrapper {
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 120px 40px 60px;
+
+  text-align: center;
+  color: $color-white;
+
+  @media (max-width: $to-laptop-width) {
+    padding: 120px 133px 60px;
+    padding-top: 67px;
+  }
+
+  @media (max-width: $to-tablet-width) {
+    padding: 84px 16px 60px;
+  }
+}
+
+
+.video__wrapper h2 {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+
+  @media (max-width: $to-laptop-width) {
+    font-size: 24px;
+  }
+}
+
+.video__wrapper p {
+  max-width: 340px;
+  margin: 0 auto;
+  margin-bottom: 55px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+
+  opacity: 0.7;
+
+  @media (max-width: $to-laptop-width) {
+    max-width: 429px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: $to-laptop-width) {
+    margin-bottom: 53px;
+
+    letter-spacing: -0.005em;
+  }
+}
+
+.video__block {
+  position: relative;
+  display: block;
+
+  max-width: 929px;
+  margin: 0 auto;
+
+  @media (max-width: $to-tablet-width) {
+    max-width: 400px;
+  }
+}
+
+.video__block img {
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 65px;
+  height: 65px;
+  padding: 0;
+
+  background-color: $color-light-blue;
+  border: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  @media (max-width: $to-laptop-width) {
+    width: 90px;
+    height: 90px;
+  }
+
+  @media (max-width: $to-tablet-width) {
+    width: 65px;
+    height: 65px;
+  }
+
+  &:active {
+    background-color: $color-dark-blue;
+  }
+}
+
+.video__play svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin-left: 3px;
+
+  transform: translate(-50%, -50%);
+
+  @media (max-width: $to-laptop-width) {
+    width: 18px;
+    height: 25px;
+  }
+
+  @media (max-width: $to-tablet-width) {
+    width: 13px;
+    height: 18px;
+    margin-left: 1px;
+  }
+}
+
+.video__play:hover svg,
+.video__play:focus svg,
+.video__play:active svg {
+  fill: $color-white;
+}

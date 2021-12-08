@@ -1,4 +1,6 @@
 .map {
+  padding-top: 91px;
+  padding-bottom: 20px;
   min-width: 320px;
   max-width: 957px;
   margin: 0 auto;
@@ -6,6 +8,7 @@
   @media (max-width: $to-laptop-width) {
     padding-right: 35px;
     padding-left: 35px;
+    padding: 11px 35px 20px;
   }
 
   @media (max-width: $to-tablet-width) {
