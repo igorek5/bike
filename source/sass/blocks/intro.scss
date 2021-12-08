@@ -9,12 +9,13 @@
   background-position: center;
   background-size: cover;
 
-  @media (min-resolution: 2dppx) {
+  @media (min-resolution: 2dppx) and (min-width: $laptop-width) {
     background-image: url("../img/content/bike@2x.jpg");
   }
 
   @media (max-width: $to-laptop-width) {
     position: relative;
+
     min-height: auto;
 
     background: none;
@@ -27,14 +28,12 @@
   justify-content: space-between;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 0 71px;
-  padding-top: 254px;
-  padding-bottom: 237px;
+  padding: 254px 72px 237px 71px;
 
   @media (max-width: $to-laptop-width) {
+    display: block;
     max-width: none;
     margin: 0;
     padding: 0;
-    display: block;
   }
 }

@@ -14,7 +14,7 @@
   }
 }
 
-.feedback p {
+.feedback__text {
   margin: 0;
   margin-bottom: 18px;
 
@@ -24,7 +24,7 @@
   text-align: center;
 
   @media (max-width: $to-laptop-width) {
-    margin-bottom: 29px;
+    margin-bottom: 30px;
 
     font-size: 18px;
     color: $color-black;

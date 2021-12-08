@@ -15,7 +15,7 @@
   <section class="intro">
     <h1 class="visually-hidden">Магазин велосипедов «Moon»</h1>
     <header class="page-header">
-      <nav class="page-header__nav main-nav open no-js">
+     <nav class="page-header__nav main-nav open no-js">
         <button class="main-nav__toggle" type="button" aria-label="Открыть/закрыть меню"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -36,14 +36,14 @@
     <div class="intro__wrapper">
       <section class="promo">
         <a class="promo__logo">
-          <img alt="Логотип" src="img/svg/logo.svg" width="67" height="20">
+          <img alt="Логотип компании «Moon»" src="img/svg/logo.svg" width="67" height="20">
         </a>
-        <h2>Мы продаем велосипеды</h2>
-        <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+        <h2 class="promo__title">Мы продаем велосипеды</h2>
+        <p class="promo__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
       </section>
       <section class="feedback">
         <h2 class="visually-hidden">Форма обратной связи</h2>
-        <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+        <p class="feedback__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
         <form action="https://echo.htmlacademy.ru" method="post">
           <div class="feedback__field">
             <label>
@@ -64,20 +64,20 @@
   </section>
   <main>
     <section class="advantages" id="advantages">
-      <h2>Несколько фактов о нас</h2>
+      <h2 class="advantages__title">Несколько фактов о нас</h2>
 
-      <ul>
-        <li>Самый широкий выбор велосипедов!</li>
-        <li>Доставка велосипедов по всей России!</li>
-        <li>Большой выбор крутых аксессуаров!</li>
-        <li>Профессиональные консультации!</li>
+      <ul class="advantages__list">
+        <li class="advantages__item advantages__item--wide">Самый широкий выбор велосипедов!</li>
+        <li class="advantages__item">Доставка велосипедов по всей России!</li>
+        <li class="advantages__item">Большой выбор крутых аксессуаров!</li>
+        <li class="advantages__item">Профессиональные консультации!</li>
       </ul>
     </section>
     <section class="types" id="types">
       <div class="types__wrapper">
-        <h2>Виды велосипедов</h2>
-        <ul>
-          <li>
+        <h2 class="types__title">Виды велосипедов</h2>
+        <ul class="types__list">
+          <li class="types__item">
             <a href="#" class="types__link">
               <div class="types__image-wrapper">
                 <picture>
@@ -89,10 +89,10 @@
                     height="503" alt="Дорожный велосипед с корзинкой">
                 </picture>
               </div>
-              <h3>Дорожный велосипед</h3>
+              <h3 class="types__title-item">Дорожный велосипед</h3>
             </a>
           </li>
-          <li>
+          <li class="types__item">
             <a href="#" class="types__link">
               <div class="types__image-wrapper">
                 <picture>
@@ -105,10 +105,10 @@
                     height="566" alt="Горный велосипед на горе">
                 </picture>
               </div>
-              <h3>Горный велосипед</h3>
+              <h3 class="types__title-item">Горный велосипед</h3>
             </a>
           </li>
-          <li>
+          <li class="types__item">
             <a href="#" class="types__link">
               <div class="types__image-wrapper">
                 <picture>
@@ -121,7 +121,7 @@
                     height="513" alt="Детский красный велосипед у дома">
                 </picture>
               </div>
-              <h3>Детский велосипед</h3>
+              <h3 class="types__title-item">Детский велосипед</h3>
             </a>
           </li>
         </ul>
@@ -129,8 +129,8 @@
     </section>
     <section class="video" id="video">
       <div class="video__wrapper">
-        <h2>Видео про велосипеды</h2>
-        <p>В этом видео мы подробно&nbsp;расскажем про особенности выбора велосипеда для себя.</p>
+        <h2 class="video__title">Видео про велосипеды</h2>
+        <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
         <div class="video__block">
           <picture>
             <source type="image/webp" media="(max-width: 767px)"
@@ -153,8 +153,9 @@
 
     </section>
     <section class="map">
-      <h2>Как нас найти?</h2>
-      <p>Мы находимся по адресу: Санкт&nbsp;-&nbsp;Петербург, ул. Большая Конюшенная,&nbsp;д.&nbsp;19</p>
+      <h2 class="map__title">Как нас найти?</h2>
+      <p class="map__text">Мы находимся по адресу: Санкт-&nbsp;Петербург, ул. Большая Конюшенная,&nbsp;д.&nbsp;19
+      </p>
       <div class="map__block">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31980.6500483669!2d30.284302238671245!3d59.93561630943495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1638705207477!5m2!1sru!2sru"

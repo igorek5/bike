@@ -5,15 +5,15 @@
   padding: 150px 20px 113px;
 
   @media (max-width: $to-laptop-width) {
-    padding: 0 93px 46px;
+    padding: 0 93px 42px;
   }
 
   @media (max-width: $to-tablet-width) {
-    padding: 0 10px 43px;
+    padding: 0 10px 46px;
   }
 }
 
-.advantages h2 {
+.advantages__title {
   max-width: 500px;
   margin: 0 auto;
   margin-bottom: 42px;
@@ -37,7 +37,7 @@
   }
 }
 
-.advantages ul {
+.advantages__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -58,7 +58,7 @@
   }
 }
 
-.advantages li {
+.advantages__item {
   position: relative;
 
   width: 300px;
@@ -72,6 +72,11 @@
 
   counter-increment: number;
 
+  &--wide {
+    padding-top: 63px;
+    padding-bottom: 17px;
+  }
+
   @media (max-width: $to-laptop-width) {
     width: 290px;
     padding: 64px 20px 10px;
@@ -83,12 +88,17 @@
 
     font-size: 18px;
     line-height: 34px;
+
+    &--wide {
+      margin-bottom: 11px;
+      padding-top: 66px;
+    }
   }
 
   &::before {
     content: "0" counter(number);
     position: absolute;
-    top: 9px;
+    top: 8px;
     left: 50%;
 
     font-weight: bold;

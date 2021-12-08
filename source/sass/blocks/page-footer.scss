@@ -1,12 +1,12 @@
 .page-footer {
-  padding: 40px 0 100px;
+  padding: 14px 0 100px;
 
   @media (max-width: $to-laptop-width) {
-    padding: 20px 0 50px;
+    padding: 0 0 50px;
   }
 
   @media (max-width: $to-tablet-width) {
-    padding: 20px 16px 50px;
+    padding: 30px 16px 50px;
   }
 }
 
@@ -14,11 +14,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 700px;
+  max-width: 567px;
   margin: 0 auto;
 
   @media (max-width: $to-laptop-width) {
-    max-width: 550px;
+    max-width: 561px;
   }
 
   @media (max-width: $to-tablet-width) {
@@ -33,7 +33,11 @@
   align-items: center;
 
   @media (max-width: $to-tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
+
+    &--mail {
+      margin-left: 6px;
+    }
   }
 }
 
@@ -58,5 +62,13 @@
 }
 
 .page-footer__link svg {
-  margin-right: 15px;
+  margin-right: 16px;
+}
+
+.page-footer__link--phone {
+  margin-right: 18px;
+
+  @media (max-width: $to-laptop-width) {
+    margin-right: 13px;
+  }
 }

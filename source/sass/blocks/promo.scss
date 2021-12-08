@@ -39,7 +39,7 @@
   margin-bottom: 30px;
 
   @media (max-width: $to-laptop-width) {
-    margin-bottom: 88px;
+    margin-bottom: 89px;
   }
 
   @media (max-width: $to-tablet-width) {
@@ -60,7 +60,7 @@
   }
 }
 
-.promo h2 {
+.promo__title {
   margin: 0;
   margin-bottom: 26px;
 
@@ -82,7 +82,7 @@
   }
 }
 
-.promo p {
+.promo__text {
   margin: 0;
 
   font-weight: 300;

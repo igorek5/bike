@@ -13,11 +13,11 @@
   }
 
   @media (max-width: $to-tablet-width) {
-    padding: 50px 25px 56px;
+    padding: 50px 25px 53px;
   }
 }
 
-.types__wrapper h2 {
+.types__title {
   max-width: 500px;
   margin: 0 auto;
   margin-bottom: 46px;
@@ -29,17 +29,18 @@
   color: $color-dark;
 
   @media (max-width: $to-laptop-width) {
-    margin-bottom: 31px;
+    margin-bottom: 30px;
 
     font-size: 24px;
     line-height: 41px;
   }
 
   @media (max-width: $to-tablet-width) {
+    margin-bottom: 31px;
   }
 }
 
-.types__wrapper ul {
+.types__list {
   display: grid;
   max-width: 1126px;
   margin: 0 auto;
@@ -70,11 +71,11 @@
 
   &:hover,
   &:focus {
-    opacity: 0.8;
+    opacity: 0.7;
   }
 
   &:active {
-    opacity: 0.6;
+    opacity: 0.4;
   }
 }
 
@@ -82,19 +83,31 @@
   margin-bottom: 20px;
 }
 
-.types__wrapper li:nth-child(3n + 1) .types__image-wrapper {
-  position: relative;
+.types__item {
+  &:nth-child(3n + 1) {
+    padding-top: 10px;
 
-  padding-top: 10px;
-
-  @media (max-width: $to-laptop-width) {
-    padding: 0;
+    @media (max-width: $to-laptop-width) {
+      padding: 0;
+    }
   }
+
+  &:nth-child(3n + 2) {
+    padding-top: 39px;
+
+    @media (max-width: $to-laptop-width) {
+      padding: 0;
+    }
+  }
+}
+
+.types__item:nth-child(3n + 1) .types__image-wrapper {
+  position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 49%;
     left: -60px;
     z-index: 0;
 
@@ -107,8 +120,8 @@
 
     @media (max-width: $to-laptop-width) {
       top: auto;
-      bottom: -27px;
-      left: -36px;
+      bottom: -28px;
+      left: -37px;
 
       width: 127px;
       height: 127px;
@@ -123,20 +136,14 @@
   }
 }
 
-.types__wrapper li:nth-child(3n + 2) .types__image-wrapper {
+.types__item:nth-child(3n + 2) .types__image-wrapper {
   position: relative;
-
-  padding-top: 39px;
-
-  @media (max-width: $to-laptop-width) {
-    padding: 0;
-  }
 
   &::before {
     content: "";
     position: absolute;
-    top: 21px;
-    left: -20px;
+    top: -17px;
+    left: -19px;
     z-index: 1;
 
     width: 47px;
@@ -167,7 +174,7 @@
   }
 }
 
-.types__wrapper li:nth-child(3n + 3) .types__image-wrapper {
+.types__item:nth-child(3n + 3) .types__image-wrapper {
   position: relative;
 
   &::before {
@@ -212,7 +219,7 @@
   }
 }
 
-.types__link h3 {
+.types__title-item {
   margin: 0;
 
   font-weight: 600;

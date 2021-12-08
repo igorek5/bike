@@ -1,7 +1,7 @@
 const mainNav = document.querySelector('.main-nav');
 const mainNavButton = document.querySelector('.main-nav__toggle');
 const body = document.querySelector('body');
-const navLinks = mainNav.querySelectorAll('.main-nav__link');
+const navLinks = document.querySelectorAll('.main-nav__link');
 
 const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
@@ -22,19 +22,26 @@ const setInitialStateMenu = () => {
   }
 };
 
-const setAnchorScroll = (elementId) => {
-  document.querySelector(elementId.getAttribute('href')).scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-  });
+const setAnchorScroll = (elementHref) => {
+  const elementId = document.querySelector(elementHref);
+  if (elementId) {
+    elementId.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
 };
 
 const setClickLink = () => {
   navLinks.forEach((el) => {
+    const elementHref = el.getAttribute('href');
+    if (elementHref[0] !== '#') {
+      return;
+    }
     el.addEventListener('click', function (evt) {
       evt.preventDefault();
       closeMenu();
-      setAnchorScroll(el);
+      setAnchorScroll(elementHref);
     });
   });
 };
