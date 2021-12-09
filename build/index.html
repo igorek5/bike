@@ -15,7 +15,7 @@
   <section class="intro">
     <h1 class="visually-hidden">Магазин велосипедов «Moon»</h1>
     <header class="page-header">
-     <nav class="page-header__nav main-nav open no-js">
+      <nav class="page-header__nav main-nav open no-js">
         <button class="main-nav__toggle" type="button" aria-label="Открыть/закрыть меню"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -45,13 +45,13 @@
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <p class="feedback__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
         <form action="https://echo.htmlacademy.ru" method="post">
-          <div class="feedback__field">
+          <div class="feedback__field feedback__field--name">
             <label>
               <span class="visually-hidden">Имя</span>
               <input type="text" name="name" placeholder="Введите Ваше Имя">
             </label>
           </div>
-          <div class="feedback__field">
+          <div class="feedback__field feedback__field--phone">
             <label>
               <span class="visually-hidden">Телефон</span>
               <input type="tel" name="phone" placeholder="Введите Ваш номер телефона">
@@ -67,64 +67,85 @@
       <h2 class="advantages__title">Несколько фактов о нас</h2>
 
       <ul class="advantages__list">
-        <li class="advantages__item advantages__item--wide">Самый широкий выбор велосипедов!</li>
-        <li class="advantages__item">Доставка велосипедов по всей России!</li>
-        <li class="advantages__item">Большой выбор крутых аксессуаров!</li>
-        <li class="advantages__item">Профессиональные консультации!</li>
+        <li class="advantages__item advantages__item--wide">
+          <span class="advantages__number">01</span>
+          <p class="advantages__text">Самый широкий выбор велосипедов!</p>
+        </li>
+        <li class="advantages__item">
+          <span class="advantages__number">02</span>
+          <p class="advantages__text">Доставка велосипедов по всей России!</p>
+        </li>
+        <li class="advantages__item">
+          <span class="advantages__number">03</span>
+          <p class="advantages__text">Большой выбор крутых аксессуаров!</p>
+        </li>
+        <li class="advantages__item">
+          <span class="advantages__number">04</span>
+          <p class="advantages__text">Профессиональные консультации!</p>
+        </li>
       </ul>
     </section>
     <section class="types" id="types">
       <div class="types__wrapper">
         <h2 class="types__title">Виды велосипедов</h2>
-        <ul class="types__list">
-          <li class="types__item">
-            <a href="#" class="types__link">
-              <div class="types__image-wrapper">
+        <div class="types__list">
+          <article class="types__item bike-card">
+            <a href="#" class="bike-card__link">
+              <div class="bike-card__wrapper">
                 <picture>
                   <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/content/road-bike-mobile@1x.webp, img/content/road-bike-mobile@2x.webp 2x">
                   <source type="image/webp" srcset="img/content/road-bike@1x.webp, img/content/road-bike@2x.webp 2x">
+                  <!-- 1х: 270px; 2x: 300px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/road-bike-mobile@1x.jpg 1x, img/content/road-bike-mobile@2x.jpg 2x">
                   <!-- 1х: 342px; 2x: 684px -->
                   <img src="img/content/road-bike@1x.jpg" srcset="img/content/road-bike@2x.jpg 2x" width="342"
                     height="503" alt="Дорожный велосипед с корзинкой">
                 </picture>
               </div>
-              <h3 class="types__title-item">Дорожный велосипед</h3>
+              <h3 class="bike-card__title">Дорожный велосипед</h3>
             </a>
-          </li>
-          <li class="types__item">
-            <a href="#" class="types__link">
-              <div class="types__image-wrapper">
+          </article>
+          <article class="types__item bike-card">
+            <a href="#" class="bike-card__link">
+              <div class="bike-card__wrapper">
                 <picture>
                   <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/content/mountain-bike-mobile@1x.webp, img/content/mountain-bike-mobile@2x.webp 2x">
                   <source type="image/webp"
                     srcset="img/content/mountain-bike@1x.webp, img/content/mountain-bike@2x.webp 2x">
+                  <!-- 1х: 270px; 2x: 300px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/mountain-bike-mobile@1x.jpg 1x, img/content/mountain-bike-mobile@2x.jpg 2x">
                   <!-- 1х: 342px; 2x: 684px -->
                   <img src="img/content/mountain-bike@1x.jpg" srcset="img/content/mountain-bike@2x.jpg 2x" width="342"
                     height="566" alt="Горный велосипед на горе">
                 </picture>
               </div>
-              <h3 class="types__title-item">Горный велосипед</h3>
+              <h3 class="bike-card__title">Горный велосипед</h3>
             </a>
-          </li>
-          <li class="types__item">
-            <a href="#" class="types__link">
-              <div class="types__image-wrapper">
+          </article>
+          <article class="types__item bike-card">
+            <a href="#" class="bike-card__link">
+              <div class="bike-card__wrapper">
                 <picture>
                   <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/content/childrens-bike-mobile@1x.webp, img/content/childrens-bike-mobile@2x.webp 2x">
                   <source type="image/webp"
                     srcset="img/content/childrens-bike@1x.webp, img/content/childrens-bike@2x.webp 2x">
+                  <!-- 1х: 270px; 2x: 300px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/childrens-bike-mobile@1x.jpg 1x, img/content/childrens-bike-mobile@2x.jpg 2x">
                   <!-- 1х: 342px; 2x: 684px -->
                   <img src="img/content/childrens-bike@1x.jpg" srcset="img/content/childrens-bike@2x.jpg 2x" width="342"
                     height="513" alt="Детский красный велосипед у дома">
                 </picture>
               </div>
-              <h3 class="types__title-item">Детский велосипед</h3>
+              <h3 class="bike-card__title">Детский велосипед</h3>
             </a>
-          </li>
-        </ul>
+          </article>
+        </div>
       </div>
     </section>
     <section class="video" id="video">
@@ -138,6 +159,12 @@
             <source type="image/webp" media="(max-width: 1023px)"
               srcset="img/content/video-bike-tablet@1x.webp, img/content/video-bike-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/content/video-bike@1x.webp, img/content/video-bike@2x.webp 2x">
+            <!-- 1х: 288px; 2x: 161px -->
+            <source media="(max-width: 767px)"
+              srcset="img/content/video-bike-mobile@1x.jpg 1x, img/content/video-bike-mobile@2x.jpg 2x">
+            <!-- 1х: 503px; 2x: 282px -->
+            <source media="(max-width: 1023px)"
+              srcset="img/content/video-bike-tablet@1x.jpg 1x, img/content/video-bike-tablet@2x.jpg 2x">
             <!-- 1х: 929px; 2x: 1858px -->
             <img src="img/content/video-bike@1x.jpg" srcset="img/content/video-bike@2x.jpg 2x" width="929" height="552"
               alt="Видео: особенности выбора велосипеда">
@@ -168,6 +195,13 @@
           <source type="image/webp" media="(max-width: 1023px)"
             srcset="img/content/map-tablet@1x.webp, img/content/map-tablet@2x.webp 2x">
           <source type="image/webp" srcset="img/content/map@1x.webp, img/content/map@2x.webp 2x">
+
+          <!-- 1х: 320px; 2x: 250px -->
+          <source media="(max-width: 767px)"
+            srcset="img/content/map-mobile@1x.png 1x, img/content/map-mobile@2x.png 2x">
+          <!-- 1х: 698px; 2x: 545px -->
+          <source media="(max-width: 1023px)"
+            srcset="img/content/map-tablet@1x.png 1x, img/content/map-tablet@2x.png 2x">
           <!-- 1х: 957px; 2x: 1914px -->
           <img src="img/content/map@1x.png" srcset="img/content/map@2x.png 2x" width="957" height="530"
             alt="Мы находимся по адресу: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
@@ -178,14 +212,14 @@
   <footer class="page-footer">
     <div class="page-footer__contacts" id="contacts">
 
-      <a class="page-footer__link page-footer__link--mail" href="mailto:puteshestviemechta@gmail.ru">
+      <a aria-label="Адрес электронной почты" class="page-footer__link page-footer__link--mail" href="mailto:puteshestviemechta@gmail.ru">
         <svg width="26" height="20">
           <use xlink:href="img/sprite_auto.svg#icon-email"></use>
         </svg>
         <span>puteshestviemechta@gmail.ru</span>
       </a>
 
-      <a class="page-footer__link page-footer__link--phone" href="tel:+749978468446">
+      <a aria-label="Номер телефона" class="page-footer__link page-footer__link--phone" href="tel:+749978468446">
         <svg width="21" height="22">
           <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
         </svg>

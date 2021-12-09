@@ -1,29 +1,33 @@
-const form = document.querySelector('.feedback').querySelector('form');
+import {initPhoneMask} from './phone-mask.js';
 
-const regexName = /^[a-zA-Zа-яА-Я]*$/;
-const regexPhone = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+const form = document.querySelector('.feedback form');
+const nameInput = document.querySelector('.feedback__field--name input');
+const phoneInput = document.querySelector('.feedback__field--phone input');
 
-const validateInput = (field, regex, value) => {
-  if (!regex.test(value) || !value) {
-    field.classList.add('is-invalid');
-    return false;
+const minNameLength = 1;
+const minPhoneLength = 17;
+
+const validateFieldLength = (field, number) => {
+  if (field.value.length > number) {
+    field.classList.remove('is-invalid');
+    return true;
   }
-  field.classList.remove('is-invalid');
-  return true;
+  field.classList.add('is-invalid');
+  return false;
 };
+
+const inputRemoveErrorHandler = (evt) => evt.target.classList.remove('is-invalid');
+
 
 const validateInputs = () => {
-  const nameInput = form.querySelector('input[name="name"]');
-  const phoneInput = form.querySelector('input[name="phone"]');
-  const flagName = validateInput(nameInput, regexName, nameInput.value);
-  const flagPhone = validateInput(phoneInput, regexPhone, phoneInput.value);
+  const flagName = validateFieldLength(nameInput, minNameLength);
+  const flagPhone = validateFieldLength(phoneInput, minPhoneLength);
 
-  if (!flagPhone || !flagName) {
+  if (!flagName || !flagPhone) {
     return false;
   }
   return true;
 };
-
 
 const formHandler = (evt) => {
   evt.preventDefault();
@@ -32,8 +36,13 @@ const formHandler = (evt) => {
   }
 };
 
-const setFormValidator = () => {
+export const initFormValidate = () => {
+  if (!form) {
+    return;
+  }
+  initPhoneMask();
+  form.querySelectorAll('input').forEach((input) => {
+    input.addEventListener('input', inputRemoveErrorHandler);
+  });
   form.addEventListener('submit', formHandler);
 };
-
-export {setFormValidator};

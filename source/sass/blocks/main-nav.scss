@@ -67,6 +67,13 @@
   transform: rotate(-45deg);
 }
 
+.main-nav.open .main-nav__toggle:hover:before,
+.main-nav.open .main-nav__toggle:focus:before,
+.main-nav.open .main-nav__toggle:hover:after,
+.main-nav.open .main-nav__toggle:focus::after {
+  background-color: rgba($color-dark-special, 1);
+}
+
 .main-nav.no-js .main-nav__toggle {
   display: none;
 }

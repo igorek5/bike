@@ -45,3 +45,14 @@ body {
     overflow: hidden;
   }
 }
+
+.error__message {
+  position: absolute;
+  top: -20px;
+  left: 0;
+
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: $color-error;
+}
