@@ -1,6 +1,7 @@
+import {scrollMenu} from './scroll';
+
 const mainNav = document.querySelector('.main-nav');
 const mainNavButton = document.querySelector('.main-nav__toggle');
-const navLinks = document.querySelectorAll('.main-nav__link');
 
 const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
@@ -10,38 +11,21 @@ const closeMenu = () => {
 };
 
 const setInitialStateMenu = () => {
-  if (mainNav) {
-    mainNav.classList.remove('open');
-    mainNav.classList.remove('no-js');
-    mainNavButton.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      mainNav.classList.toggle('open');
-      document.body.classList.toggle('no-scroll');
-    });
-  }
-};
-
-const setAnchorScroll = (elementHref) => {
-  const elementId = document.querySelector(elementHref);
-  if (elementId) {
-    elementId.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
-  }
+  mainNav.classList.remove('open');
+  mainNavButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    mainNav.classList.toggle('open');
+    document.body.classList.toggle('no-scroll');
+  });
 };
 
 const setClickLink = () => {
-  navLinks.forEach((el) => {
-    const elementHref = el.getAttribute('href');
-    if (elementHref[0] !== '#') {
-      return;
-    }
-    el.addEventListener('click', (evt) => {
+  mainNav.addEventListener('click', (evt) => {
+    if (evt.target.classList.contains('main-nav__link')) {
       evt.preventDefault();
       closeMenu();
-      setAnchorScroll(elementHref);
-    });
+      scrollMenu(evt.target.getAttribute('href'));
+    }
   });
 };
 
